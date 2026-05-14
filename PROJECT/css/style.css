@@ -1,0 +1,177 @@
+/* ================= GLOBAL & THEME VARIABLES ================= */
+:root {
+  /* Emerald & Slate Aesthetic Palette */
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --primary-glow: rgba(16, 185, 129, 0.2);
+  --bg-dark: #0f172a;
+  --surface: #1e293b;
+  --text-bright: #f8fafc;
+  --text-dim: #94a3b8;
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --shadow-luxe: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-bright);
+  min-height: 100vh;
+}
+
+/* ================= LOGIN & SIGNUP (Perfectly Centered) ================= */
+
+/* ================= LOGIN & SIGNUP CENTERING ================= */
+
+body.auth-page {
+  /* This creates a container that fills the entire screen */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  /* These three lines do the magic centering */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  
+  /* Keeping your cool dark background */
+  background: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
+  overflow: hidden; /* Prevents unwanted scrollbars */
+}
+
+/* This is the "Box" part (your card) */
+.card {
+  background: #1e1b4b; /* Matching your cool purple theme */
+  padding: 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 400px; /* Limits width so it looks like a box */
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Ensures everything inside the card is also aligned */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure headings and text stay inside the box properly */
+.brand, .tagline {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* INPUTS & BUTTONS */
+input, select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  background: rgba(15, 23, 42, 0.6);
+  color: white;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #064e3b;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px -5px var(--primary-glow);
+}
+/* ===== DASHBOARD CLEAN RESET ===== */
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  color: #10b981;
+}
+
+.sidebar li {
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar {
+  height: 60px;
+  background: #020617;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* NAV */
+.nav-links span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+  padding: 25px;
+}
+
+/* EVENTS (HORIZONTAL FIX) */
+.events {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+/* CARDS */
+.card-event {
+  min-width: 250px;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}

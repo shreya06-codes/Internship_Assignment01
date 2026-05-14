@@ -1,0 +1,74 @@
+<head><link rel="stylesheet" href="css/style.css"></head>
+<body class="dashboard-page">
+    
+
+<div class="dashboard-container">
+    
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>EventHub</h2>
+    <ul>
+      <li onclick="showSection('home')">Home</li>
+      <li onclick="showSection('about')">About</li>
+      <li onclick="showSection('register')">Register</li>
+      <li onclick="showSection('create')">Create Event</li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <h3>Welcome 👋</h3>
+
+      <div class="nav-links">
+        <span onclick="showSection('home')">Home</span>
+        <span onclick="showSection('about')">About</span>
+        <span onclick="showSection('register')">Register</span>
+        <span onclick="showSection('create')">Create</span>
+        <span onclick="logout()">Logout</span>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- HOME -->
+      <div id="home-section">
+        <h2>Upcoming Events</h2>
+        <div class="events" id="events"></div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about-section" style="display:none;">
+        <h2>About</h2>
+        <p>EventHub platform for students & colleges.</p>
+      </div>
+
+      <!-- REGISTER -->
+      <div id="register-section" style="display:none;">
+        <h2>Register</h2>
+        <input placeholder="Name">
+        <input placeholder="Email">
+        <button>Register</button>
+      </div>
+
+      <!-- CREATE -->
+      <div id="create-section" style="display:none;">
+        <h2>Create Event</h2>
+        <input placeholder="Title">
+        <input placeholder="Date">
+        <input placeholder="Description">
+        <button>Add Event</button>
+      </div>
+<div>
+      <button onclick="logout()">Logout</button> </div>
+    </div>
+
+  </div>
+</div>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
